@@ -24,7 +24,7 @@
       </ul>
 
       <footer class="footer" role="contentinfo">
-        <p>Made with <span class="mikumiku">love</span> in Halifax, NS</p>
+        <p>Made with <span class="mikumiku">love</span> in Halifax, NS. <a href="https://github.com/mseymour/markseymour.ca">Browse on GitHub</a></p>
       </footer>
 
       <!--
