@@ -5,7 +5,7 @@ services:
     image: nginx:latest
     restart: unless-stopped
     ports:
-      - "8080:80"
+      - "2300:80"
     volumes:
       - .:/usr/share/nginx/html
       - ./.nginx.conf:/etc/nginx/conf.d/default.conf
