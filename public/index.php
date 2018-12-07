@@ -19,12 +19,11 @@
       <ul class="grid">
         <li class="grid__item"><a class="social social--github" href="https://github.com/mseymour" title="Mark Seymour on Github"><span class="social__label">GitHub</span></a></li>
         <li class="grid__item"><a class="social social--behance"  href="https://behance.net/markseymour" title="Mark Seymour on Behance"><span class="social__label">Behance</span></a></li>
-        <li class="grid__item grid__item--separated"><a class="social social--twitter" href="https://twitter.com/azuretan" title="Mark Seymour on Twitter"><span class="social__label">Twitter</span></a></li>
-        <li class="grid__item"><a class="social social--linkedin"  href="https://linkedin.com/in/markevanseymour" title="Mark Seymour on LinkedIn"><span class="social__label">LinkedIn</span></a></li>
+        <li class="grid__item grid__item--separated"><a class="social social--linkedin"  href="https://linkedin.com/in/markevanseymour" title="Mark Seymour on LinkedIn"><span class="social__label">LinkedIn</span></a></li>
       </ul>
 
       <footer class="footer" role="contentinfo">
-        <p>Made with <span class="mikumiku">love</span> in Halifax, NS. <a href="https://github.com/mseymour/markseymour.ca">Browse on GitHub</a></p>
+        <p>Made with <span class="mikumiku">love</span> in Halifax, NS. <a href="https://github.com/mseymour/markseymour.ca">Browse on GitHub</a> / <a href="https://twitter.com/azuretan" title="Mark Seymour on Twitter">@azuretan</a></p>
       </footer>
 
       <!--
