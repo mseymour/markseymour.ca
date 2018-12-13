@@ -23,7 +23,7 @@
       </ul>
 
       <footer class="footer" role="contentinfo">
-        <p>Made with <span class="mikumiku">love</span> in Halifax, NS. <a href="https://github.com/mseymour/markseymour.ca">Browse on GitHub</a> / <a href="https://twitter.com/azuretan" title="Mark Seymour on Twitter">@azuretan</a></p>
+        <p>Made with <span class="mikumiku">love</span> in Halifax, NS. <a href="https://github.com/mseymour/markseymour.ca">Browse on GitHub</a></p>
       </footer>
 
       <!--
