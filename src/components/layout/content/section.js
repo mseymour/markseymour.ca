@@ -3,7 +3,9 @@ import PropTypes from "prop-types"
 
 const Section = ({ modifiers, children }) => (
   <section class={`section` + (modifiers.map(i => ' section--' + i).join())}>
-    {children}
+    <div class="section__content">
+      {children}
+    </div>
   </section>
 )
 

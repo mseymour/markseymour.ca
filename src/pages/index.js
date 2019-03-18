@@ -5,14 +5,16 @@ import Layout from "../components/layout"
 import Hero from "../components/layout/content/hero"
 import Main from "../components/layout/content/main"
 import Section from "../components/layout/content/section"
-// import Image from "../components/image"
+import Logo from "!svg-react-loader!../images/logo.inline.svg?name=Logo"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Mark Seymour" keywords={[`mark seymour`, `creative`, `full stack`, `front-end`, `back-end`, `devops`, `web developer`, `personal`, `portfolio`]} />
     <Hero>
-      <h1><span>Mark Seymour</span> <span>the <em>creative</em> Full-Stack Web Developer</span></h1>
+      <Logo style={{
+          fill: `white`
+        }} />
     </Hero>
     <Main>
       <Section modifiers={[`welcome`]}>

@@ -1,3 +1,19 @@
+@import 'angled-edges';
+
 body {
-  background-color: red;
+
+}
+
+.hero {
+  background-color: #00A4D4;
+  color: #FFF;
+  text-align: center;
+  padding: 0;
+  height: 75vh;
+  @include angle-edge($angle: 12, $angle-position-y: 'bottom', $angle-position-x: 'right', $angle-position-bottom-x: 'left');
+  &__content {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
