@@ -1,10 +1,11 @@
 import React from "react"
+// import { Link } from "gatsby"
 
 const ContentInfo = () => (
   <footer role="contentinfo">
-    © {new Date().getFullYear()}, Built with
-    {` `}
-    <a href="https://www.gatsbyjs.org">Gatsby</a>
+    <ul>
+      <li><a href="mailto:hello@markseymour.ca">hello@markseymour.ca</a></li>
+    </ul>
   </footer>
 )
 
