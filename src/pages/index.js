@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, withPrefix } from "gatsby"
+import { withPrefix } from "gatsby"
 
 import Layout from "../components/layout"
 import Hero from "../components/layout/content/hero"
@@ -20,7 +20,7 @@ const IndexPage = () => (
       <Section modifiers={[`welcome`]}>
         <div class="container mx-auto my-8 px-4">
           <h1 class="welcome-text">I am a creative web developer living in Halifax, Canada with over a decade of professional and personal experience working with full-stack web technologies.</h1>
-          <a target="_blank" class='resume-download' href={withPrefix(`mark_seymour_resume.pdf`)}>Download Résumé</a>
+          <a target="_blank" rel="noopener noreferrer" class='resume-download' href={withPrefix(`mark_seymour_resume.pdf`)}>Download Résumé</a>
         </div>
       </Section>
       <Section modifiers={[`portfolio`]}>

@@ -2,7 +2,7 @@ import React from "react"
 // import { Link } from "gatsby"
 
 const ContentInfo = () => (
-  <footer role="contentinfo" class="container mx-auto">
+  <footer role="contentinfo" class="container mx-auto text-center pt-2">
     Made with <span class="rabu">love</span> in Halifax, Nova Scotia
     <ul class="links links--horizontal links--inline">
       <li class="links__item"><a href="mailto:hello@markseymour.ca">hello@markseymour.ca</a></li>

@@ -65,10 +65,10 @@ body {
   }
   .links--horizontal &__item {
     & + .links__item::before {
-      @screen sm {
+      // @screen sm {
         @apply mx-2;
         content: '\2022';
-      }
+      // }
     }
     a {
       @apply no-underline;
