@@ -12,9 +12,9 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Mark Seymour" keywords={[`mark seymour`, `creative`, `full stack`, `front-end`, `back-end`, `devops`, `web developer`, `personal`, `portfolio`]} />
     <Hero>
-      <Logo style={{
-          fill: `white`
-        }} />
+      <div class="hero__logowrap">
+        <Logo class="hero__logo" />
+      </div>
     </Hero>
     <Main>
       <Section modifiers={[`welcome`]}>

@@ -120,7 +120,7 @@
 
 // Converts degrees to VW, 100vw = 45deg using this technique
 @function convertDegToVW($angle){
-  @return round($angle*2.22);
+  @return round($angle*2.2222);
 }
 
 
