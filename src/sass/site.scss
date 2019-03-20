@@ -29,13 +29,26 @@ body {
   @apply text-center;
 }
 
+.welcome-text {
+  font-weight: normal;
+}
+
+.resume-download {
+  @apply my-8 inline-block no-underline bg-brand-blue text-white font-bold py-2 px-4 rounded;
+  &:hover, &:focus {
+    @apply bg-brand-black;
+  }
+}
+
 .section--contact {
-  @apply bg-brand-blue text-white text-center py-8;
+  @apply bg-brand-blue text-white text-center pb-4;
+  padding-top: 15%;
+  @include angle-edge($angle: 10, $angle-position-y: 'top', $angle-position-x: 'left', $angle-position-bottom-x: 'right');
 }
 
 .links {
   list-style: none;
-  @apply flex my-4 pl-0 items-center justify-center;
+  @apply flex flex-col my-4 pl-0 items-center justify-center;
   &--large {
     @apply text-3xl;
   }
@@ -45,10 +58,17 @@ body {
   &__item {
     display: inline-block;
   }
+  @screen sm {
+    &--horizontal {
+        @apply flex-row;
+    }
+  }
   .links--horizontal &__item {
     & + .links__item::before {
-      @apply mx-2;
-      content: '\2022';
+      @screen sm {
+        @apply mx-2;
+        content: '\2022';
+      }
     }
     a {
       @apply no-underline;
