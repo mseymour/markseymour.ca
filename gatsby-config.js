@@ -46,6 +46,7 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         implementation: require("sass"),
+        postCssPlugins: [require('tailwindcss')('./tailwind.js')],
       },
     },
     {
@@ -56,6 +57,7 @@ module.exports = {
         }
       }
     },
+    `gatsby-plugin-postcss`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
