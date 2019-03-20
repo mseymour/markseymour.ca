@@ -18,11 +18,19 @@ const IndexPage = () => (
     </Hero>
     <Main>
       <Section modifiers={[`welcome`]}>
-        <p>I am a <mark>creative web developer</mark> living in Halifax, Canada with over a decade of professional and personal experience working with full-stack web technologies.</p>
-        <p>Want to chat? Let&rsquo;s talk.</p>
+        <div class="container mx-auto my-8">
+          <h1>I am a creative web developer living in Halifax, Canada with over a decade of professional and personal experience working with full-stack web technologies.</h1>
+        </div>
       </Section>
-      <Section>
-        <p>Secondary section!</p>
+      <Section modifiers={[`contact`]}>
+        <div class="container mx-auto">
+          <h1>Want to chat? <br/><em>Let&rsquo;s get in touch.</em></h1>
+          <ul class="links links--horizontal links--large">
+            <li class="links__item"><a href="mailto:hello@markseymour.ca">hello@markseymour.ca</a></li>
+            <li class="links__item"><a href="https://github.com/mseymour">GitHub</a></li>
+            <li class="links__item"><a href="https://linkedin.com/in/markevanseymour">LinkedIn</a></li>
+          </ul>
+        </div>
       </Section>
     </Main>
   </Layout>
