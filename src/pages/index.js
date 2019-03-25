@@ -20,7 +20,7 @@ const IndexPage = () => (
       <Section modifiers={[`welcome`]}>
         <div class="container mx-auto my-8 px-4">
           <h1 class="welcome-text">I am a creative web developer living in Halifax, Canada with over a decade of professional and personal experience working with full-stack web technologies.</h1>
-          <a target="_blank" rel="noopener noreferrer" class='resume-download' href={withPrefix(`mark_seymour_resume.pdf`)}>Download Résumé</a>
+          <a target="_blank" rel="noopener noreferrer" class="btn" href={withPrefix(`mark_seymour_resume.pdf`)}>View Résumé</a>
         </div>
       </Section>
       <Section modifiers={[`portfolio`]}>
@@ -39,9 +39,10 @@ const IndexPage = () => (
           <h1>Want to chat? <br/><em>Let&rsquo;s get in touch.</em></h1>
           <ul class="links links--horizontal links--large">
             <li class="links__item"><a href="mailto:hello@markseymour.ca">hello@markseymour.ca</a></li>
-            <li class="links__item"><a href="https://github.com/mseymour">GitHub</a></li>
-            <li class="links__item"><a href="https://linkedin.com/in/markevanseymour">LinkedIn</a></li>
+            <li class="links__item"><a target="_blank" rel="noopener noreferrer" href="https://github.com/mseymour">GitHub</a></li>
+            <li class="links__item"><a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/markevanseymour">LinkedIn</a></li>
           </ul>
+          <a target="_blank" rel="noopener noreferrer" class="btn btn--invert" href={withPrefix(`mark_seymour_resume.pdf`)}>View Résumé</a>
         </div>
       </Section>
     </Main>

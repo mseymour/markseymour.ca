@@ -9,6 +9,18 @@ body {
   @apply text-brand-black;
 }
 
+a {
+  @apply text-brand-blue font-bold no-underline;
+}
+
+a:hover, a:focus {
+  @apply underline;
+}
+
+.container {
+  outline: 1px dashed red;
+}
+
 .hero {
   @apply bg-brand-blue text-white text-center;
   padding: 5% 0 10%;
@@ -33,17 +45,16 @@ body {
   font-weight: normal;
 }
 
-.resume-download {
-  @apply my-8 inline-block no-underline bg-brand-blue text-white font-bold py-2 px-4 rounded;
-  &:hover, &:focus {
-    @apply bg-brand-black;
+.btn {
+  &, a.btn {
+    @apply my-8 inline-block no-underline bg-brand-blue text-white font-bold py-2 px-4 text-2xl;
   }
-}
-
-.section--contact {
-  @apply bg-brand-blue text-white text-center pb-4;
-  padding-top: 15%;
-  @include angle-edge($angle: 10, $angle-position-y: 'top', $angle-position-x: 'left', $angle-position-bottom-x: 'right');
+  &--invert {
+    @apply bg-white text-brand-blue;
+  }
+  &:hover, &:focus {
+    @apply bg-brand-black text-white;
+  }
 }
 
 .links {
@@ -80,6 +91,32 @@ body {
   }
 }
 
+.section--portfolio {
+  @apply bg-brand-black text-white pb-4;
+  padding: #{convertDegToVW(10) / 1.15}vw 0;
+  @include angle-edge($angle: 10, $angle-position-y: 'both', $angle-position-x: 'left', $angle-position-bottom-x: 'right');
+}
+
+.section--contact {
+  .section--portfolio + & {
+    margin-top: -#{convertDegToVW(10)}vw;
+  }
+  @apply bg-brand-blue text-white text-center pb-4;
+  padding: #{convertDegToVW(10) / 1.25}vw 0;
+  @include angle-edge($angle: 10, $angle-position-y: 'both', $angle-position-x: 'left', $angle-position-bottom-x: 'right');
+}
+
+.contentinfo {
+  @apply bg-brand-black text-white text-center pb-2;
+  margin-top: -#{convertDegToVW(10)}vw;
+  padding-top: #{convertDegToVW(10) / 1.15}vw;
+  @include angle-edge($angle: 10, $angle-position-y: 'top', $angle-position-x: 'left', $angle-position-bottom-x: 'right');
+  .container {
+    transform: rotate(-12deg);
+    transform-origin: top left;
+  }
+}
+
 .rabu {
   display: inline-block;
   white-space: normal;
@@ -88,9 +125,50 @@ body {
   vertical-align: middle;
   width: 1rem;
   height: 1rem;
-  background-color: #ed2062;
   mask-size: 1rem;
   mask-position: center left;
   mask-repeat: no-repeat;
   mask-image: url('../images/heart-solid.svg');
+  background-color: adjust-hue(#00A4D4, 190deg);
+  filter: hue-rotate(0);
+  &:hover {
+    animation: rabu-fx 2s;
+  }
+}
+
+@keyframes rabu-fx {
+  //
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+    filter: hue-rotate(360deg);
+  }
 }
