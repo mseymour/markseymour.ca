@@ -18,42 +18,38 @@ a:hover, a:focus {
 }
 
 .container {
-  outline: 1px dashed red;
+  // outline: 1px dashed red;
 }
 
 .hero {
   @apply bg-brand-blue text-white text-center;
-  padding: 5% 0 10%;
-  @include angle-edge($angle: 10, $angle-position-y: 'bottom', $angle-position-x: 'right', $angle-position-bottom-x: 'left');
-  &__content {
-    display: block;
+  @include angle-edge($angle: 9.5, $angle-position-y: 'bottom', $angle-position-x: 'right', $angle-position-bottom-x: 'left');
+  width: 100%;
+  padding-bottom: 2.5%;
+  &__logo {
     width: 100%;
-    height: auto;
+    min-height: 12.5rem;
   }
-  &__logowrap {
-    margin: 0 auto;
-    width: 75vw;
-    position: relative;
-  }
-}
-
-.section--welcome {
-  @apply text-center;
-}
-
-.welcome-text {
-  font-weight: normal;
 }
 
 .btn {
   &, a.btn {
-    @apply my-8 inline-block no-underline bg-brand-blue text-white font-bold py-2 px-4 text-2xl;
+    @apply my-8 inline-block no-underline text-white font-bold py-2 px-4 text-2xl;
+    background: {
+      image: linear-gradient(12deg, rgba(#00A4D4, 50%), rgba(#00A4D4, 100%) 50%, rgba(#00A4D4, 50%));
+      position: top left;
+      attachment: fixed;
+    }
+    border-radius: 1.75rem;
+
   }
   &--invert {
-    @apply bg-white text-brand-blue;
+    @apply text-brand-blue;
+    background-image: linear-gradient(12deg, rgba(#FFF, 50%), rgba(#FFF, 100%) 50%, rgba(#FFF, 50%));
   }
   &:hover, &:focus {
-    @apply bg-brand-black text-white;
+    @apply text-white no-underline;
+    background-image: linear-gradient(12deg, rgba(#262626, 50%), rgba(#262626, 100%) 50%, rgba(#262626, 50%));
   }
 }
 
@@ -91,28 +87,30 @@ a:hover, a:focus {
   }
 }
 
+.section {
+  @include angle-edge($angle: 9.5, $angle-position-y: 'both', $angle-position-x: 'left', $angle-position-bottom-x: 'right');
+  margin: {
+    top: -#{convertDegToVW(10)}vw;
+    bottom: -#{convertDegToVW(10)}vw;
+  }
+}
+
 .section--portfolio {
-  @apply bg-brand-black text-white pb-4;
-  padding: #{convertDegToVW(10) / 1.15}vw 0;
-  @include angle-edge($angle: 10, $angle-position-y: 'both', $angle-position-x: 'left', $angle-position-bottom-x: 'right');
+  padding: #{convertDegToVW(10)}vw 0;
 }
 
 .section--contact {
-  .section--portfolio + & {
-    margin-top: -#{convertDegToVW(10)}vw;
-  }
   @apply bg-brand-blue text-white text-center pb-4;
   padding: #{convertDegToVW(10) / 1.25}vw 0;
-  @include angle-edge($angle: 10, $angle-position-y: 'both', $angle-position-x: 'left', $angle-position-bottom-x: 'right');
 }
 
 .contentinfo {
   @apply bg-brand-black text-white text-center pb-2;
   margin-top: -#{convertDegToVW(10)}vw;
   padding-top: #{convertDegToVW(10) / 1.15}vw;
-  @include angle-edge($angle: 10, $angle-position-y: 'top', $angle-position-x: 'left', $angle-position-bottom-x: 'right');
+  @include angle-edge($angle: 9.5, $angle-position-y: 'top', $angle-position-x: 'left', $angle-position-bottom-x: 'right');
   .container {
-    transform: rotate(-12deg);
+    // transform: rotate(-12deg);
     transform-origin: top left;
   }
 }

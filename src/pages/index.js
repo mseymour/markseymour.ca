@@ -12,17 +12,9 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Mark Seymour" keywords={[`mark seymour`, `creative`, `full stack`, `front-end`, `back-end`, `devops`, `web developer`, `personal`, `portfolio`]} />
     <Hero>
-      <div class="hero__logowrap">
-        <Logo class="hero__logo" />
-      </div>
+      <Logo aria-label="Mark Seymour: the creative full-stack web developer" role="img" class="hero__logo" />
     </Hero>
     <Main>
-      <Section modifiers={[`welcome`]}>
-        <div class="container mx-auto my-8 px-4">
-          <h1 class="welcome-text">I am a creative web developer living in Halifax, Canada with over a decade of professional and personal experience working with full-stack web technologies.</h1>
-          <a target="_blank" rel="noopener noreferrer" class="btn" href={withPrefix(`mark_seymour_resume.pdf`)}>View Résumé</a>
-        </div>
-      </Section>
       <Section modifiers={[`portfolio`]}>
         <div class="container mx-auto px-4 text-center">
           <h1 class="mb-4">Portfolio <span class="text-sm">(Work in progress)</span></h1>
