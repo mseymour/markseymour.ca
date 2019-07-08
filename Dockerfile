@@ -18,11 +18,11 @@ RUN yarn build
 
 FROM nginx:alpine
 
-# COPY nginx /etc/nginx/
+COPY nginx /etc/nginx/
 COPY --from=build --chown=nginx:nginx /app/public /usr/share/nginx/html
 RUN touch /var/run/nginx.pid && chown nginx:nginx /var/run/nginx.pid
 
-USER nginx
+#USER nginx
 
 EXPOSE 8080
 HEALTHCHECK CMD [ "wget", "-q", "localhost:8080" ]
