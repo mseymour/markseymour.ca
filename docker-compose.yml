@@ -1,13 +1,10 @@
 version: '3'
 
 services:
-    www-markseymour-ca:
-        build: '.'
-        image: 'azuretan/markseymour.ca'
-        container_name: 'web-nginx'
-        restart: 'unless-stopped'
-        ports:
-            - '2300:8080'
+  www-markseymour-ca:
+    build: '.'
+    image: 'azuretan/markseymour.ca'
+    restart: 'unless-stopped'
 
 networks:
   default:
